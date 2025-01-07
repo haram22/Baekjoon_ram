@@ -1,12 +1,10 @@
-n = int(input())
-members = []
+num = int(input())
+users = []
+for i in range(num) :
+    users.append(input().split(' '))
+    users[i][0] = int(users[i][0])
+    
+users.sort(key=lambda x:x[0])
 
-for i in range(n):
-    age, name = input().split()
-    members.append((int(age), name, i))
-
-# 나이로 먼저 정렬하고, 나이가 같다면 가입 순서로 정렬
-sorted_members = sorted(members, key=lambda x: (x[0], x[2]))
-
-for member in sorted_members:
-    print(member[0], member[1])
+for i in range(len(users)) :
+    print(users[i][0],users[i][1])
