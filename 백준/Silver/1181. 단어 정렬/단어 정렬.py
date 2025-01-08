@@ -1,15 +1,13 @@
-num = int(input())
+import sys
+N = int(sys.stdin.readline())
 input_list = []
-sort_len = []
-result = []
+final_list = []
 
-for i in range(num):
-    inputstr = input()
-    input_list.append(inputstr)
+for _ in range(N) :
+    user_input = sys.stdin.readline().rstrip('\n')
+    input_list.append(user_input)
+final_list = list(set(input_list))
+result = sorted(final_list, key=lambda x : (len(x), x)  )
 
-sort_len = list(set(input_list)) # 중복 제거
-# 두 개 이상의 조건을 기준으로 분류할 때, x: (길이순, 순서대로)
-result = sorted(sort_len, key=lambda x: (len(x), x))
-
-for i in range(len(result)):
-    print(result[i])
+for word in result :
+    print(word)
