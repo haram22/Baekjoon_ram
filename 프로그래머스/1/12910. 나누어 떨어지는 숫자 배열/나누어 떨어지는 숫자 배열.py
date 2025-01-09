@@ -7,4 +7,3 @@ def solution(arr, divisor):
         answer.append(-1)
         
     return sorted(answer)
-    
