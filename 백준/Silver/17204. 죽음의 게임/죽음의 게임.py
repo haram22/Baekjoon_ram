@@ -5,15 +5,15 @@ for i in range(N) :
     numList.append(int(sys.stdin.readline()))
 
 path = []
-count = 0
 pick = 0
+count = -1
+
 while K not in path :
     path.append(pick)
     pick = numList[pick]
     count += 1
 
     if count > N :
-        count = 0
+        count = -1
         break
-
-print(count - 1)
+print(count)
