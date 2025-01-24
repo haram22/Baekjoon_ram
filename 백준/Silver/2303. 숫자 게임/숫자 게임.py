@@ -4,10 +4,8 @@ N = int(sys.stdin.readline())
 cardList = []
 maxList = []
 sumList = [] * N
-# print(sumList)
 for i in range(N) :
     cardList.append(list(map(int, input().split(' '))))
-    # print(list(combinations(cardList[i], 3)))
     caseList = list(combinations(cardList[i], 3))
     max1 = 0
     maxNum = 0
